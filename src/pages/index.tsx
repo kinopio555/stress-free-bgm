@@ -9,21 +9,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import SignOutButton from "./components/SignOutButton";
 import  UserInfo  from "./components/UserInfo";
 import SelectArea from "./components/SelectArea";
-import { useEffect, useState, useRef } from "react";
-
-type App1Props = {
-  audioRef: any;
-}
-const App1:React.FC<App1Props> = ({audioRef}) => {
-  return (
-      <div>
-          <audio ref={audioRef} src="./../music/sunnymorning.mp3" controls></audio>
-      </div>
-  );
-}
-
-
-
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const APIKey = "66a11b3469e1028bcfd1e3ac79013ad4"
@@ -58,22 +44,10 @@ export default function Home() {
   }, []);
 
   const [user] = useAuthState(auth)
-  const ref = useRef<HTMLAudioElement>(null);
+  
   return (
     <>
-    <h1>stress free BGM</h1>
-    <App1 audioRef={ref} />
-    <button onClick={() => ref.current?.play()}>START</button>
-    <audio src="../../music/sunnymorning.mp3" id="audio1"></audio>
-    <audio src="../../music/cloudymorning.mp3" id="audio2"></audio>
-    <audio src="../../music/rainymorning.mp3" id="audio3"></audio>
-    <audio src="../../music/sunnyday.mp3" id="audio4"></audio>
-    <audio src="../../music/cloudyday.mp3" id="audio5"></audio>
-    <audio src="../../music/rainyday.mp3" id="audio6"></audio>
-    <audio src="../../music/sunnynight.mp3" id="audio7"></audio>
-    <audio src="../../music/cloudynight.mp3" id="audio8"></audio>
-    <audio src="../../music/rainynight.mp3" id="audio9"></audio>
-    
+    <h1>stress free BGM</h1>    
     {user ? (
       <>
         <UserInfo auth={auth} />
