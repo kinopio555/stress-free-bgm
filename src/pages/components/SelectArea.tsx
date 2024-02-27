@@ -1,4 +1,6 @@
 import { useRef } from "react"
+import styled from "styled-components"
+
 
 type SelectAreaProps = {
     weather: any;
@@ -111,6 +113,13 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
         }
         // 他の条件に基づいて適切なaudioを再生するコードを追加
     }
+    const StyledStartButton = styled.button`
+    background-color: orange;
+    font-size: 3em;
+    border-radius: 20px;
+    margin-left :30%;
+    margin-top: 5%;
+    `
     return (
         <>
             <audio src="../../music/sunnymorning.mp3" ref={audio0}></audio>
@@ -122,6 +131,11 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
             <audio src="../../music/sunnynight.mp3" ref={audio6}></audio>
             <audio src="../../music/cloudynight.mp3" ref={audio7}></audio>
             <audio src="../../music/rainynight.mp3" ref={audio8}></audio>
+            <div style={{display: 'flex'}}>
+                <p style={{flexGrow: 1, position: 'relative', left: 'em'}}>area</p>
+                <p style={{flexGrow: 1}}>time</p>
+                <p style={{flexGrow: 1}}>weather</p>
+            </div>
             <label>
                 <input
                 type="radio"
@@ -129,8 +143,9 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
                 name="area"/>
                 JAPAN
             </label>
-            {japanhour}  
-            {weather[0]}  
+            <span style={{marginLeft: '24%'}}>{japanhour} o clock</span>
+            <span style={{marginLeft: '27%'}}>{weather[0]} </span>
+            <br></br>
             <label>
                 <input
                 type="radio"
@@ -138,8 +153,9 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
                 name="area"/>
                 LONDON
             </label>
-            {londonhour} 
-            {weather[1]} 
+            <span style={{marginLeft: '22%'}}>{londonhour} o clock</span>
+            <span style={{marginLeft: '28%'}}>{weather[1]} </span>
+            <br></br>
             <label>
                 <input
                 type="radio"
@@ -147,8 +163,9 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
                 name="area"/>
                 LOS ANGELS
             </label>
-            {loshour} 
-            {weather[2]}
+            <span style={{marginLeft: '20%'}}>{loshour} o clock</span>
+            <span style={{marginLeft: '28%'}}>{weather[2]}</span>
+            <br></br>
             <label>
                 <input
                 type="radio"
@@ -156,9 +173,11 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
                 name="area"/>
                 NEW YORK
             </label>
-            {newyorkhour}   
-            {weather[3]}
-            <button onClick={playAudio}>START</button>
+            <span style={{marginLeft: '21%'}}>{newyorkhour} o clock   </span>
+            <span style={{marginLeft: '28%'}}>{weather[3]}</span>
+            <h3 style={{color: 'red'}}>attention</h3>
+            <p>summer time is not considered</p>
+            <StyledStartButton onClick={playAudio}>START</StyledStartButton>
         </>
     )
 }

@@ -44,26 +44,23 @@ export default function Home() {
   }, []);
 
   const [user] = useAuthState(auth)
-  
+
   return (
-    <>
-    <h1>stress free BGM</h1>    
+    <div style={{marginTop: '5%', marginLeft: '10%'}}>
+    <h1 style={{marginBottom: '7%'}}>stress free BGM</h1>    
     {user ? (
       <>
         <UserInfo auth={auth} />
-        <SignOutButton />
-        {/* <StartButton /> */}
+        <SignOutButton />       
         <form>
         <SelectArea weather={weather} />
         </form>
-        <h3>attention</h3>
-        <p>summer time is not considered</p>
       </>
     ): (
       <>
         <SignInButton auth={auth} provider={provider} />
       </>
     )}
-    </>
+    </div>
   );
 }
