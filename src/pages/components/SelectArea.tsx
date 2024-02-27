@@ -143,8 +143,8 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
                 name="area"/>
                 JAPAN
             </label>
-            <span style={{marginLeft: '24%'}}>{japanhour} o clock</span>
-            <span style={{marginLeft: '27%'}}>{weather[0]} </span>
+            <span style={{marginLeft: '25%'}}>{japanhour} o clock</span>
+            <span style={{marginLeft: '28%'}}>{weather[0]} </span>
             <br></br>
             <label>
                 <input

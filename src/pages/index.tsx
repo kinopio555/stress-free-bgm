@@ -12,7 +12,7 @@ import SelectArea from "./components/SelectArea";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const APIKey = "66a11b3469e1028bcfd1e3ac79013ad4"
+  const APIKey = "<%= ENV['OPEN_WEATHER_MAP_KEY'] %>"
   const tokyo = 'Tokyo'
   const london = 'London'
   const los_angels = 'LosAngels'
