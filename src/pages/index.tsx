@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-import { auth, provider } from "./firebase"
+import auth, { provider } from "./firebase"
 import SignInButton from "./components/SignInButton";
 import { useAuthState } from "react-firebase-hooks/auth"
 import SignOutButton from "./components/SignOutButton";
