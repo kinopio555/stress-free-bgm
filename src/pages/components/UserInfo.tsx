@@ -1,5 +1,6 @@
 import { auth } from "../firebase"
 import styled from "styled-components"
+import Image from "next/image";
 
 type UserInfoProps = {
     auth: any
@@ -12,7 +13,7 @@ const UserInfo:React.FC<UserInfoProps> = ({auth}) => {
     `
     return (
         <UserInfoStyled>
-            <img src={auth.currentUser.photoURL} alt="ユーザ情報" />
+            <img src={auth.currentUser.photoURL} alt="ユーザ情報"  />
         </UserInfoStyled>
     )
 }
