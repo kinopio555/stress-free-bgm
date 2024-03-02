@@ -1,4 +1,4 @@
-import { auth } from "../../firebase"
+import { auth } from "../firebase"
 import styled from "styled-components"
 
 type UserInfoProps = {

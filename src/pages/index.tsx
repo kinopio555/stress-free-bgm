@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-import { auth, provider } from "../firebase"
+import { auth, provider } from "./firebase"
 import SignInButton from "./components/SignInButton";
 import { useAuthState } from "react-firebase-hooks/auth"
 import SignOutButton from "./components/SignOutButton";
@@ -12,7 +12,7 @@ import SelectArea from "./components/SelectArea";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const APIKey = "<%= ENV['OPEN_WEATHER_MAP_KEY'] %>"
+  const APIKey = "66a11b3469e1028bcfd1e3ac79013ad4"
   const tokyo = 'Tokyo'
   const london = 'London'
   const los_angels = 'LosAngels'

@@ -32,9 +32,7 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
         let elements = document.getElementsByName('area');
         elements.forEach((element: any) => {
             if (element.checked) {
-                selectedArea = element.value;
-                console.log(selectedArea)
-            }
+                selectedArea = element.value;            }
         });
 
         // 選択された地域と時間、天気に基づいてaudioを再生

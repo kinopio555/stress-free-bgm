@@ -7,7 +7,7 @@ import { GoogleAuthProvider } from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "<%= ENV['FIREBASE_KEY'] %>",
+  apiKey: "AIzaSyD8MNPPQ3s7moBKFnUg7F_gywVUkRZ6xLk",
   authDomain: "stress-free-bgm.firebaseapp.com",
   projectId: "stress-free-bgm",
   storageBucket: "stress-free-bgm.appspot.com",

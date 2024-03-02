@@ -11,6 +11,7 @@
   "dependencies": {
     "firebase": "^10.8.0",
     "next": "14.1.0",
+    "node-fetch": "^2.7.0",
     "react": "^18",
     "react-dom": "^18",
     "react-firebase-hooks": "^5.1.1",
@@ -18,8 +19,10 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/node-fetch": "^2.6.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vercel/node": "^3.0.20",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "typescript": "^5"
