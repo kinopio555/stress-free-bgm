@@ -14,8 +14,6 @@ export default function SelectArea ({weather}:SelectAreaProps) {
     const loshour = Math.floor( (GMT - (1000 * 60 * 60 * 8))/ 1000 / 60 / 60 % 24)
     const newyorkhour = Math.floor( (GMT - (1000 * 60 * 60 * 5))/ 1000 / 60 / 60 % 24)
 
-    
-
     const audio0 = useRef<HTMLAudioElement>(null);
     const audio1 = useRef<HTMLAudioElement>(null);
     const audio2 = useRef<HTMLAudioElement>(null);
@@ -36,77 +34,77 @@ export default function SelectArea ({weather}:SelectAreaProps) {
         });
 
         // 選択された地域と時間、天気に基づいてaudioを再生
-        if (selectedArea === 'JAPAN' && japanhour >= 4 && japanhour < 10 && weather[0] === 'Clear') {
+        if (selectedArea === 'JAPAN' && japanhour >= 4 && japanhour < 10 && weather?.[0] === 'Clear') {
             audio0.current?.play();
-        } else if(selectedArea === 'JAPAN' && japanhour >= 4 && japanhour < 10 && weather[0] === 'Clouds') {
+        } else if(selectedArea === 'JAPAN' && japanhour >= 4 && japanhour < 10 && weather?.[0] === 'Clouds') {
             audio1.current?.play()
-        } else if(selectedArea === 'JAPAN' && japanhour >= 4 && japanhour < 10 && weather[0] === 'Rain') {
+        } else if(selectedArea === 'JAPAN' && japanhour >= 4 && japanhour < 10 && weather?.[0] === 'Rain') {
             audio2.current?.play()
-        } else if(selectedArea === 'JAPAN' && japanhour >= 10 && japanhour < 17 && weather[0] === 'Clear') {
+        } else if(selectedArea === 'JAPAN' && japanhour >= 10 && japanhour < 17 && weather?.[0] === 'Clear') {
             audio3.current?.play()
-        } else if(selectedArea === 'JAPAN' && japanhour >= 10 && japanhour < 17 && weather[0] === 'Clouds') {
+        } else if(selectedArea === 'JAPAN' && japanhour >= 10 && japanhour < 17 && weather?.[0] === 'Clouds') {
             audio4.current?.play()
-        } else if(selectedArea === 'JAPAN' && japanhour >= 10 && japanhour < 17 && weather[0] === 'Rain') {
+        } else if(selectedArea === 'JAPAN' && japanhour >= 10 && japanhour < 17 && weather?.[0] === 'Rain') {
             audio5.current?.play()
-        } else if(selectedArea === 'JAPAN' && (japanhour >= 17 || japanhour < 4) && weather[0] === 'Clear') {
+        } else if(selectedArea === 'JAPAN' && (japanhour >= 17 || japanhour < 4) && weather?.[0] === 'Clear') {
             audio6.current?.play()
-        } else if(selectedArea === 'JAPAN' && (japanhour >= 17 || japanhour < 4) && weather[0] === 'Clouds') {
+        } else if(selectedArea === 'JAPAN' && (japanhour >= 17 || japanhour < 4) && weather?.[0] === 'Clouds') {
             audio7.current?.play()
-        } else if(selectedArea === 'JAPAN' && (japanhour >= 17 || japanhour < 4) && weather[0] === 'Rain') {
+        } else if(selectedArea === 'JAPAN' && (japanhour >= 17 || japanhour < 4) && weather?.[0] === 'Rain') {
             audio8.current?.play()
-        } else if (selectedArea === 'LONDON' && londonhour >= 4 && londonhour < 10 && weather[1] === 'Clear') {
+        } else if (selectedArea === 'LONDON' && londonhour >= 4 && londonhour < 10 && weather?.[1] === 'Clear') {
             audio0.current?.play();
-        } else if(selectedArea === 'LONDON' && londonhour >= 4 && londonhour < 10 && weather[1] === 'Clouds') {
+        } else if(selectedArea === 'LONDON' && londonhour >= 4 && londonhour < 10 && weather?.[1] === 'Clouds') {
             audio1.current?.play()
-        } else if(selectedArea === 'LONDON' && londonhour >= 4 && londonhour < 10 && weather[1] === 'Rain') {
+        } else if(selectedArea === 'LONDON' && londonhour >= 4 && londonhour < 10 && weather?.[1] === 'Rain') {
             audio2.current?.play()
-        } else if(selectedArea === 'LONDON' && londonhour >= 10 && londonhour < 17 && weather[1] === 'Clear') {
+        } else if(selectedArea === 'LONDON' && londonhour >= 10 && londonhour < 17 && weather?.[1] === 'Clear') {
             audio3.current?.play()
-        } else if(selectedArea === 'LONDON' && londonhour >= 10 && londonhour < 17 && weather[1] === 'Clouds') {
+        } else if(selectedArea === 'LONDON' && londonhour >= 10 && londonhour < 17 && weather?.[1] === 'Clouds') {
             audio4.current?.play()
-        } else if(selectedArea === 'LONDON' && londonhour >= 10 && londonhour < 17 && weather[1] === 'Rain') {
+        } else if(selectedArea === 'LONDON' && londonhour >= 10 && londonhour < 17 && weather?.[1] === 'Rain') {
             audio5.current?.play()
-        } else if(selectedArea === 'LONDON' && (londonhour >= 17 || londonhour < 4) && weather[1] === 'Clear') {
+        } else if(selectedArea === 'LONDON' && (londonhour >= 17 || londonhour < 4) && weather?.[1] === 'Clear') {
             audio6.current?.play()
-        } else if(selectedArea === 'LONDON' && (londonhour >= 17 || londonhour < 4) && weather[1] === 'Clouds') {
+        } else if(selectedArea === 'LONDON' && (londonhour >= 17 || londonhour < 4) && weather?.[1] === 'Clouds') {
             audio7.current?.play()
-        } else if(selectedArea === 'LONDON' && (londonhour >= 17 || londonhour < 4) && weather[1] === 'Rain') {
+        } else if(selectedArea === 'LONDON' && (londonhour >= 17 || londonhour < 4) && weather?.[1] === 'Rain') {
             audio8.current?.play()
-        } else if (selectedArea === 'LOS ANGELS' && loshour >= 4 && loshour < 10 && weather[2] === 'Clear') {
+        } else if (selectedArea === 'LOS ANGELS' && loshour >= 4 && loshour < 10 && weather?.[2] === 'Clear') {
             audio0.current?.play();
-        } else if(selectedArea === 'LOS ANGELS' && loshour >= 4 && loshour < 10 && weather[2] === 'Clouds') {
+        } else if(selectedArea === 'LOS ANGELS' && loshour >= 4 && loshour < 10 && weather?.[2] === 'Clouds') {
             audio1.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && loshour >= 4 && loshour < 10 && weather[2] === 'Rain') {
+        } else if(selectedArea === 'LOS ANGELS' && loshour >= 4 && loshour < 10 && weather?.[2] === 'Rain') {
             audio2.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && loshour >= 10 && loshour < 17 && weather[2] === 'Clear') {
+        } else if(selectedArea === 'LOS ANGELS' && loshour >= 10 && loshour < 17 && weather?.[2] === 'Clear') {
             audio3.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && loshour >= 10 && loshour < 17 && weather[2] === 'Clouds') {
+        } else if(selectedArea === 'LOS ANGELS' && loshour >= 10 && loshour < 17 && weather?.[2] === 'Clouds') {
             audio4.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && loshour >= 10 && loshour < 17 && weather[2] === 'Rain') {
+        } else if(selectedArea === 'LOS ANGELS' && loshour >= 10 && loshour < 17 && weather?.[2] === 'Rain') {
             audio5.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && (loshour >= 17 || loshour < 4) && weather[2] === 'Clear') {
+        } else if(selectedArea === 'LOS ANGELS' && (loshour >= 17 || loshour < 4) && weather?.[2] === 'Clear') {
             audio6.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && (loshour >= 17 || loshour < 4) && weather[2] === 'Clouds') {
+        } else if(selectedArea === 'LOS ANGELS' && (loshour >= 17 || loshour < 4) && weather?.[2] === 'Clouds') {
             audio7.current?.play()
-        } else if(selectedArea === 'LOS ANGELS' && (loshour >= 17 || loshour < 4) && weather[2] === 'Rain') {
+        } else if(selectedArea === 'LOS ANGELS' && (loshour >= 17 || loshour < 4) && weather?.[2] === 'Rain') {
             audio8.current?.play()
-        } else if (selectedArea === 'NEW YORK' && newyorkhour >= 4 && newyorkhour < 10 && weather[3] === 'Clear') {
+        } else if (selectedArea === 'NEW YORK' && newyorkhour >= 4 && newyorkhour < 10 && weather?.[3] === 'Clear') {
             audio0.current?.play();
-        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 4 && newyorkhour < 10 && weather[3] === 'Clouds') {
+        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 4 && newyorkhour < 10 && weather?.[3] === 'Clouds') {
             audio1.current?.play()
-        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 4 && newyorkhour < 10 && weather[3] === 'Rain') {
+        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 4 && newyorkhour < 10 && weather?.[3] === 'Rain') {
             audio2.current?.play()
-        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 10 && newyorkhour < 17 && weather[3] === 'Clear') {
+        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 10 && newyorkhour < 17 && weather?.[3] === 'Clear') {
             audio3.current?.play()
-        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 10 && newyorkhour < 17 && weather[3] === 'Clouds') {
+        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 10 && newyorkhour < 17 && weather?.[3] === 'Clouds') {
             audio4.current?.play()
-        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 10 && newyorkhour < 17 && weather[3] === 'Rain') {
+        } else if(selectedArea === 'NEW YORK' && newyorkhour >= 10 && newyorkhour < 17 && weather?.[3] === 'Rain') {
             audio5.current?.play()
-        } else if(selectedArea === 'NEW YORK' && (newyorkhour >= 17 || newyorkhour < 4) && weather[3] === 'Clear') {
+        } else if(selectedArea === 'NEW YORK' && (newyorkhour >= 17 || newyorkhour < 4) && weather?.[3] === 'Clear') {
             audio6.current?.play()
-        } else if(selectedArea === 'NEW YORK' && (newyorkhour >= 17 || newyorkhour < 4) && weather[3] === 'Clouds') {
+        } else if(selectedArea === 'NEW YORK' && (newyorkhour >= 17 || newyorkhour < 4) && weather?.[3] === 'Clouds') {
             audio7.current?.play()
-        } else if(selectedArea === 'NEW YORK' && (newyorkhour >= 17 || newyorkhour < 4) && weather[3] === 'Rain') {
+        } else if(selectedArea === 'NEW YORK' && (newyorkhour >= 17 || newyorkhour < 4) && weather?.[3] === 'Rain') {
             audio8.current?.play()
         }
         // 他の条件に基づいて適切なaudioを再生するコードを追加

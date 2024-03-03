@@ -13,8 +13,8 @@ export default function UserInfo({auth}:UserInfoProps){
     `
     return (
         <UserInfoStyled>
-            <img src={auth.currentUser.photoURL} alt="ユーザ情報"  />
-        </UserInfoStyled>
+// 例: 条件レンダリングを使用
+{auth.currentUser && <img src={auth.currentUser.photoURL} alt="ユーザ情報" />}        </UserInfoStyled>
     )
 }
 
