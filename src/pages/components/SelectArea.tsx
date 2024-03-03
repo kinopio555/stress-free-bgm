@@ -140,7 +140,7 @@ export default function SelectArea ({weather}:SelectAreaProps) {
                 JAPAN
             </label>
             <span style={{marginLeft: '25%'}}>{japanhour} o clock</span>
-            <span style={{marginLeft: '28%'}}>{weather[0]} </span>
+            <span style={{marginLeft: '28%'}}>{weather?.[0]} </span>
             <br></br>
             <label>
                 <input
@@ -150,7 +150,7 @@ export default function SelectArea ({weather}:SelectAreaProps) {
                 LONDON
             </label>
             <span style={{marginLeft: '22%'}}>{londonhour} o clock</span>
-            <span style={{marginLeft: '28%'}}>{weather[1]} </span>
+            <span style={{marginLeft: '28%'}}>{weather?.[1]} </span>
             <br></br>
             <label>
                 <input
@@ -160,7 +160,7 @@ export default function SelectArea ({weather}:SelectAreaProps) {
                 LOS ANGELS
             </label>
             <span style={{marginLeft: '20%'}}>{loshour} o clock</span>
-            <span style={{marginLeft: '28%'}}>{weather[2]}</span>
+            <span style={{marginLeft: '28%'}}>{weather?.[2]}</span>
             <br></br>
             <label>
                 <input
@@ -170,7 +170,7 @@ export default function SelectArea ({weather}:SelectAreaProps) {
                 NEW YORK
             </label>
             <span style={{marginLeft: '21%'}}>{newyorkhour} o clock   </span>
-            <span style={{marginLeft: '28%'}}>{weather[3]}</span>
+            <span style={{marginLeft: '28%'}}>{weather?.[3]}</span>
             <h3 style={{color: 'red'}}>attention</h3>
             <p>summer time is not considered</p>
             <StyledStartButton onClick={playAudio}>START</StyledStartButton>
