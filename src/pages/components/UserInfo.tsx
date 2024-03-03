@@ -13,7 +13,8 @@ export default function UserInfo({auth}:UserInfoProps){
     `
     return (
         <UserInfoStyled>
-{auth.currentUser && <img src={auth.currentUser.photoURL} alt="ユーザ情報" />}        </UserInfoStyled>
+            {typeof window !== 'undefined' && auth.currentUser && <img src={auth.currentUser.photoURL} alt="ユーザ情報" />}  
+        </UserInfoStyled>
     )
 }
 

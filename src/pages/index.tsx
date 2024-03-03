@@ -24,7 +24,7 @@ export default function Home() {
       const a = response.json()
       return a
     })
-    .then(a => a.weather[0].main)
+    .then(a => a.weather?.[0]?.main)
   }  
 
   const [weather, setWeather] = useState<string[]>([]);
