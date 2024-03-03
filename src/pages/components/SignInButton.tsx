@@ -4,7 +4,7 @@ type SignInProps = {
     auth: any,
     provider: any
 }
-const SignInButton:React.FC<SignInProps> = ({auth, provider}) => {
+export default function SignInButton({auth, provider}:SignInProps) {
     const signInWithGoodle = () => {
         signInWithPopup(auth, provider)
     }
@@ -15,4 +15,3 @@ const SignInButton:React.FC<SignInProps> = ({auth, provider}) => {
     )
 }
 
-export default SignInButton

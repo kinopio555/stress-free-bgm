@@ -5,7 +5,7 @@ import Image from "next/image";
 type UserInfoProps = {
     auth: any
 }
-const UserInfo:React.FC<UserInfoProps> = ({auth}) => {
+export default function UserInfo({auth}:UserInfoProps){
     const UserInfoStyled = styled.div`
     position: absolute;
     top: 10px;
@@ -18,4 +18,3 @@ const UserInfo:React.FC<UserInfoProps> = ({auth}) => {
     )
 }
 
-export default UserInfo

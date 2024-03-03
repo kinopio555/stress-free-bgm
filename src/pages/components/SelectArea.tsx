@@ -6,7 +6,7 @@ type SelectAreaProps = {
     weather: any;
 }
 
-const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
+export default function SelectArea ({weather}:SelectAreaProps) {
     const now = new Date()
     const GMT = now.getTime()
     const londonhour = Math.floor(GMT / 1000 / 60 / 60 % 24)
@@ -179,5 +179,3 @@ const SelectArea:React.FC<SelectAreaProps> = ({weather}) => {
         </>
     )
 }
-
-export default SelectArea

@@ -1,7 +1,7 @@
 import auth from "../firebase"
 import styled from "styled-components"
 
-const SignOutButton = () => {
+export default function SignOutButton() {
     const SignOutButtonStyled = styled.button`
     background-color: skyblue;
     position: absolute;
@@ -14,5 +14,3 @@ const SignOutButton = () => {
         </SignOutButtonStyled>
     )
 }
-
-export default SignOutButton
